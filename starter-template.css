@@ -1,0 +1,13 @@
+p.error, p.success {
+	font-weight: bold;
+	padding: 10px;
+	border: 1px solid;
+}
+p.error {
+	background: #ffc0c0;
+	color: #900;
+}
+p.success {
+	background: #b3ff69;
+	color: #4fa000;
+}
