@@ -12,10 +12,61 @@ p.success {
 	color: #4fa000;
 }
 
+.homeText {
+
+	font : normal normal normal 90px/1.4em enriqueta, serif;
+	color : rgb(156,156,156);
+
+}
+
+
+
+.bottom-banner {
+
+	height:385px;
+	width : 100%;
+	line-height:385px;
+	text-align: center;
+	vertical-align: middle;
+	background-color:rgba(36, 36, 36, 0.5);
+
+
+}
+
+.imageBanner{
+	display: inline-block;
+	width:340px;
+}
+
+img{
+	opacity:0.8;
+}
+
+img:hover {
+    opacity: 1.0;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+}
+
+
+
+.textNav{
+	font:normal normal normal 23px/1.4em enriqueta, serif;
+}
+
+.navbarperso{
+	background-color:transparent;
+}
+
+footer{
+	height:120px;
+	background-color : #00000;
+}
+
 body {
 	background : #000000;
 	background-image: url("Images/10460044_10152473119607453_1647378892_o.jpg");
 	background-repeat:no-repeat;
 	background-attachment:fixed;
 	background-position:center;
+	color : #FFFFFF;
 	}
