@@ -11,3 +11,11 @@ p.success {
 	background: #b3ff69;
 	color: #4fa000;
 }
+
+body {
+	background : #000000;
+	background-image: url("Images/10460044_10152473119607453_1647378892_o.jpg");
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-position:center;
+	}

@@ -222,16 +222,5 @@ function get_data($var) {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 	
-	<style>
-		
-		body {
-			background-image: url("Images/10460044_10152473119607453_1647378892_o.jpg");
-			background-repeat:no-repeat;
-			background-attachment:fixed;
-			background-position:center;
-		}
-	
-	</style>
-	
   </body>
 </html>
