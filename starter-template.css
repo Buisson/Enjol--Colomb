@@ -41,7 +41,7 @@ p.success {
 .imageBanner-Wrapper{
 	width: 1030px;
     margin: 0 auto;
-	line-height:385px;
+	line-height:/*385*/300px; /*over here n00b*/
 	text-align: center;
 	vertical-align: middle;
 }
@@ -49,6 +49,7 @@ p.success {
 	overflow:overlay;
 	display: inline-block;
 	width:340px;
+	text-align:center;
 }
 
 img{
