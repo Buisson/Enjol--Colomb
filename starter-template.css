@@ -23,7 +23,7 @@ p.success {
 
 .bottom-banner {
 
-	height:385px;
+	height:500px;
 	width : 100%;
 	line-height:385px;
 	text-align: center;
@@ -36,6 +36,18 @@ p.success {
 .imageBanner{
 	display: inline-block;
 	width:340px;
+}
+
+.imageBanner-Wrapper{
+	width: 1030px;
+    margin: 0 auto;
+	text-align: center;
+	vertical-align: middle;
+}
+.imageText{
+	display: inline-block;
+	width:340px;
+	height:100px;
 }
 
 img{
