@@ -38,15 +38,26 @@ p.success {
 	
 }
 
-.spacer1 {
+.spacer2 {
+	width: 100%;
+	height: 20px;
+}
+
+.spacer2 {
 	width: 100%;
 	height: 55px;
+}
+
+.menu {
+	    padding-left: 10px;
+		padding-right: 10px;
+		font: 26px/1.4em enriqueta,serif;
 }
 
 .imageBanner-Wrapper{
 	width: 1030px;
     margin: 0 auto;
-	line-height:/*385*/300px; /*over here n00b*/
+	line-height: 300px;
 	text-align: center;
 	vertical-align: middle;
 }
