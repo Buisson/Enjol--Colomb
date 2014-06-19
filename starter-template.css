@@ -38,6 +38,11 @@ p.success {
 	
 }
 
+.spacer1 {
+	width: 100%;
+	height: 55px;
+}
+
 .imageBanner-Wrapper{
 	width: 1030px;
     margin: 0 auto;
@@ -50,6 +55,10 @@ p.success {
 	display: inline-block;
 	width:340px;
 	text-align:center;
+
+    font: 28px/1.4em enriqueta,serif;
+    color: #DFDFDF;
+
 }
 
 img{
