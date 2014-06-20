@@ -220,7 +220,7 @@ function get_data($var) {
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-		  <img height="150" src="Images/logo.png"/>
+		  <!-- <img height="150" src="Images/logo.png"/> -->
           
         </div>
 		

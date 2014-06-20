@@ -79,6 +79,15 @@ h1 {
 
 }
 
+.imageText a {
+	color: #F0F0F0;
+}
+
+.imageText a:hover {
+	color: #59CEE5;
+	text-decoration: none;
+}
+
 img{
 	opacity:0.6;
 }
