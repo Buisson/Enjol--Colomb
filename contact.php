@@ -219,7 +219,7 @@ function get_data($var) {
 			</div>
 			</p>
 			<p>
-				<input type="submit" name="submit" id="submit" value="Send" <?php if (isset($disable) && $disable === true) echo ' disabled="disabled"'; ?> />
+				<input class="btn btn-default" type="submit" name="submit" id="submit" value="Send" <?php if (isset($disable) && $disable === true) echo ' disabled="disabled"'; ?> />
 			</p>
 		</form>
 		
