@@ -1,11 +1,59 @@
 <?php
+require 'CaptchasDotNet.php';
+
+// Required Parameters
+// Replace the values you receive upon registration at http://captchas.net.
+//
+//   client: 'demo'
+//
+//   secret: 'secret'
+//
+// Optional Parameters and defaults
+//
+//   repository_prefix: '/tmp/captchasnet-random-strings' path to repository
+//   ATTENTION SAFE-MODE, YOU HAVE TO CHOOSE SOMETHING LIKE
+//   '/writable/path/captchasnet-random-strings'
+//
+//   cleanup_time: '3600' (means max 1 hour between query and check)
+//
+//   alphabet: 'abcdefghijklmnopqrstuvwxyz' (Used characters in captcha)
+//   We recommend alphabet without ijl: 'abcdefghkmnopqrstuvwxyz'
+//
+//   letters: '6' (Number of characters in captcha)
+//
+//   width: '240' (image width)
+//
+//   height: '80' (image height)
+//
+//   color: '000000' (image color in rgb)
+//
+//   language: 'en' (audio language, append &language=fr/de/it/nl to audio-url)
+//
+//   Usage
+//   $captchas = new CaptchasDotNet (<client>, <secret>,
+//                                   <repository_prefix>, <cleanup_time>,
+//                                   <alphabet>,<letters>,
+//                                   <height>,<width>,<color>);
+//
+// Don't forget same settings in check.php
+
+// Construct the captchas object.
+
+$captchas = new CaptchasDotNet ('demo', 'secret',
+                                'tmp/c4ptch4-h1d3!','3600',
+                                'abcdefghkmnopqrstuvwxyz','4',
+                                '240','80','000088');
+								
+								
+								
+								
 // OPTIONS - PLEASE CONFIGURE THESE BEFORE USE!
 
 $yourEmail = "random@randum.dur"; // the email address you wish to receive these mails through
 $yourWebsite = "WEBSITE NAME"; // the name of your website
 $thanksPage = ''; // URL to 'thanks for sending mail' page; leave empty to keep message on the same page 
 $maxPoints = 4; // max points a person can hit before it refuses to submit - recommend 4
-$requiredFields = "name,email,comments,url"; // names of the fields you'd like to be required as a minimum, separate each field with a comma
+$requiredFields = "name,email,url,password"; // names of the fields you'd like to be required as a minimum, separate each field with a comma
 
 
 // DO NOT EDIT BELOW HERE
@@ -35,6 +83,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 	if (isBot() !== false)
 		$error_msg[] = "No bots please! UA reported as: ".$_SERVER['HTTP_USER_AGENT'];
 		
+	$password = $_REQUEST['password'];	
+	$random_string = $_REQUEST['random'];
+	
 	// lets check a few things - not enough to trigger an error on their own, but worth assigning a spam score.. 
 	// score quickly adds up therefore allowing genuine users with 'accidental' score through but cutting out real spam :)
 	$points = (int)0;
@@ -75,6 +126,13 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 		$error_msg[] = "That is not a valid e-mail address.\r\n";
 	if (!empty($_POST['url']) && !preg_match('/^(http|https):\/\/(([A-Z0-9][A-Z0-9_-]*)(\.[A-Z0-9][A-Z0-9_-]*)+)(:(\d+))?\/?/i', $_POST['url']))
 		$error_msg[] = "Invalid website url.\r\n";
+		
+	//CAPTCHA
+	if (!empty($_POST['password']) && !$captchas->validate ($random_string))
+		$error_msg[] = "The session key (random) does not exist, please go back and reload form.\r\n";
+	elseif (!empty($_POST['password']) && !$captchas->verify ($password))
+		$error_msg[] = "You entered the wrong password. Aren't you human? Please use back button and reload.\r\n";
+		
 	
 	if ($error_msg == NULL && $points <= $maxPoints) {
 		$subject = "Automatic Form Email";
@@ -200,6 +258,7 @@ function get_data($var) {
 			<noscript>
 				<p><input type="hidden" name="nojs" id="nojs" /></p>
 			</noscript>
+			<input type="hidden" name="random" value="<?= $captchas->random () ?>" />
 			<p>
 			<div class="form-group">
 				<label for="name">Name: *</label> 
@@ -219,8 +278,14 @@ function get_data($var) {
 			</div>
 			</p>
 			<p>
+			 <p><?= $captchas->image () ?> <a href="javascript:captchas_image_reload('captchas.net')">Reload Image</a> </p>
+				<label for="password">CAPTCHA password : </label>
+				<input type="text" name="password" size="32">
+			</p>
+			<p>
 				<input class="btn btn-default" type="submit" name="submit" id="submit" value="Send" <?php if (isset($disable) && $disable === true) echo ' disabled="disabled"'; ?> />
 			</p>
+
 		</form>
 		
 		
