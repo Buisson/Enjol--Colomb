@@ -139,6 +139,7 @@ function get_data($var) {
 
     <!-- Custom styles for this template -->
     <link href="starter-template.css" rel="stylesheet">
+	<link href="css/form.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -151,7 +152,7 @@ function get_data($var) {
   </head>
 
   <body>
-
+	<div class="spacer1">&nbsp;</div>
     <div class="navbar navbar-inverse navbar-top navbarperso" style="border:none;" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -165,12 +166,12 @@ function get_data($var) {
           
         </div>
 		
-        <div class="collapse navbar-collapse" style="width:75%;">
+        <div class="collapse navbar-collapse" style="width:90%;">
 		
           <ul class="nav navbar-nav navbar-right">
-            <li class="textNav navbarperso"><a href="index.html">Home</a></li>
-            <li class="textNav navbarperso"><a href="about.html">About</a></li>
-            <li class="textNav navbarperso"><a href="contact.php">Contact</a></li>
+            <li class="menu"><a href="index.html">Home</a></li>
+            <li class="menu"><a href="about.html">About</a></li>
+            <li class="menu"><a href="contact.php" style="color: #59CEE5">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
 		
@@ -182,8 +183,11 @@ function get_data($var) {
       <div class="starter-template">
 		<br>
 		<br>
-        <h1>Contact</h1>
-        <p class="lead">If you want you can contact us here : </p>
+        <h1>Nous contacter</h1>
+        <p class="lead">Par mail :</p>
+			<p class="paragraphe"><a href="mailto:random@mail.com"><img src="Images/mail.png"></a></p>
+		<div class="spacer1">&nbsp;</div>
+		<p class="lead">Par le site :</p>
 		<?php
 			if (!empty($error_msg)) {
 				echo '<p class="error">ERROR: '. implode("<br />", $error_msg) . "</p>";
@@ -203,16 +207,18 @@ function get_data($var) {
 				<label for="email">E-mail: *</label> 
 					<input type="text" name="email" id="email" value="<?php get_data("email"); ?>" /><br />
 	
-				<label for="url">Website URL:</label> 
+				<label for="url">Website URL: *</label> 
 					<input type="text" name="url" id="url" value="<?php get_data("url"); ?>" /><br />
 	
-				<label for="comments">Comments: *</label>
+				<label for="comments">Comments: </label>
 					<textarea name="comments" id="comments" rows="5" cols="20"><?php get_data("comments"); ?></textarea><br />
 			</p>
 			<p>
 				<input type="submit" name="submit" id="submit" value="Send" <?php if (isset($disable) && $disable === true) echo ' disabled="disabled"'; ?> />
 			</p>
 		</form>
+		
+		
 		
 		
       </div>
