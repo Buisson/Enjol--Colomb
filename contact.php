@@ -201,17 +201,22 @@ function get_data($var) {
 				<p><input type="hidden" name="nojs" id="nojs" /></p>
 			</noscript>
 			<p>
+			<div class="form-group">
 				<label for="name">Name: *</label> 
-					<input type="text" name="name" id="name" value="<?php get_data("name"); ?>" /><br />
-	
+				<input class="form-control" type="text" name="name" id="name" value="<?php get_data("name"); ?>" /><br />
+			</div>
+			<div class="form-group">
 				<label for="email">E-mail: *</label> 
-					<input type="text" name="email" id="email" value="<?php get_data("email"); ?>" /><br />
-	
+				<input class="form-control" type="text" name="email" id="email" value="<?php get_data("email"); ?>" /><br />
+			</div>
+			<div class="form-group">
 				<label for="url">Website URL: *</label> 
-					<input type="text" name="url" id="url" value="<?php get_data("url"); ?>" /><br />
-	
+				<input class="form-control" type="text" name="url" id="url" value="<?php get_data("url"); ?>" /><br />
+			</div>
+			<div class="form-group">
 				<label for="comments">Comments: </label>
-					<textarea name="comments" id="comments" rows="5" cols="20"><?php get_data("comments"); ?></textarea><br />
+				<textarea class="form-control" name="comments" id="comments" rows="5" cols="20"><?php get_data("comments"); ?></textarea><br />
+			</div>
 			</p>
 			<p>
 				<input type="submit" name="submit" id="submit" value="Send" <?php if (isset($disable) && $disable === true) echo ' disabled="disabled"'; ?> />
