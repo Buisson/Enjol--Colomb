@@ -45,9 +45,15 @@ h1 {
 	
 }
 
-.spacer2 {
+.local{
+	float: right;
+	display: inline-block;
+}
+
+
+.spacer1 {
 	width: 100%;
-	height: 20px;
+	height: 10px;
 }
 
 .spacer2 {
@@ -56,9 +62,15 @@ h1 {
 }
 
 .menu {
+		display: inline;
 	    padding-left: 10px;
 		padding-right: 10px;
 		font: 26px/1.4em enriqueta,serif;
+}
+
+.local {
+	    padding-left: 0px;
+		padding-right: 0px;
 }
 
 .imageBanner-Wrapper{
