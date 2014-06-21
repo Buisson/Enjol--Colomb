@@ -27,7 +27,7 @@
 	//Contact
 	$contactTitle = "Contact us";
 	$byMail = "By mail :";
-	$bySite = "By our website :";
+	$bySite = "Use our website :";
 	$name = "Name: *";
 	$websiteURL = "Website URL: *";
 	$comment = "Comment: ";
