@@ -1,6 +1,12 @@
 <?php
 require 'CaptchasDotNet.php';
 
+if(isset($_GET['local']) && $_GET['local']="en") {
+	require('en.php');
+}else{
+	require('fr.php');
+}
+
 // Required Parameters
 // Replace the values you receive upon registration at http://captchas.net.
 //
@@ -224,12 +230,14 @@ function get_data($var) {
           
         </div>
 		
-        <div class="collapse navbar-collapse" style="width:90%;">
+        <div class="collapse navbar-collapse">
 		
           <ul class="nav navbar-nav navbar-right">
-            <li class="menu"><a href="index.html">Home</a></li>
-            <li class="menu"><a href="about.html">About</a></li>
-            <li class="menu"><a href="contact.php" style="color: #59CEE5">Contact</a></li>
+            <li class="menu"><a href="index.php<?php echo $local; ?>"><?php echo $home; ?></a></li>
+            <li class="menu"><a href="about.php<?php echo $local; ?>"><?php echo $about; ?></a></li>
+            <li class="menu"><a href="contact.php<?php echo $local; ?>" style="color: #59CEE5"><?php echo $contact; ?></a></li>
+			<a href="<?php echo basename(__FILE__); ?>"><img src="Images/fr.png"></a> 
+			<a href="<?php echo basename(__FILE__); ?>?local=en"><img src="Images/en.png"></a>
           </ul>
         </div><!--/.nav-collapse -->
 		
@@ -241,11 +249,11 @@ function get_data($var) {
       <div class="starter-template">
 		<br>
 		<br>
-        <h1>Nous contacter</h1>
-        <p class="lead">Par mail :</p>
+        <h1><?php echo $contactTitle;?></h1>
+        <p class="lead"><?php echo $byMail;?></p>
 			<p class="paragraphe"><a href="mailto:random@mail.com"><img src="Images/mail.png"></a></p>
 		<div class="spacer1">&nbsp;</div>
-		<p class="lead">Par le site :</p>
+		<p class="lead"><?php echo $bySite;?></p>
 		<?php
 			if (!empty($error_msg)) {
 				echo '<p class="error">ERROR: '. implode("<br />", $error_msg) . "</p>";
@@ -261,7 +269,7 @@ function get_data($var) {
 			<input type="hidden" name="random" value="<?= $captchas->random () ?>" />
 			<p>
 			<div class="form-group">
-				<label for="name">Name: *</label> 
+				<label for="name"><?php echo $name;?></label> 
 				<input class="form-control" type="text" name="name" id="name" value="<?php get_data("name"); ?>" /><br />
 			</div>
 			<div class="form-group">
@@ -269,21 +277,21 @@ function get_data($var) {
 				<input class="form-control" type="text" name="email" id="email" value="<?php get_data("email"); ?>" /><br />
 			</div>
 			<div class="form-group">
-				<label for="url">Website URL: *</label> 
+				<label for="url"><?php echo $websiteURL;?></label> 
 				<input class="form-control" type="text" name="url" id="url" value="<?php get_data("url"); ?>" /><br />
 			</div>
 			<div class="form-group">
-				<label for="comments">Comments: </label>
+				<label for="comments"><?php echo $comment;?></label>
 				<textarea class="form-control" name="comments" id="comments" rows="5" cols="20"><?php get_data("comments"); ?></textarea><br />
 			</div>
 			</p>
 			<p>
 			 <p><?= $captchas->image () ?> <a href="javascript:captchas_image_reload('captchas.net')">Reload Image</a> </p>
-				<label for="password">CAPTCHA password : </label>
+				<label for="password"><?php echo $captchaPwd;?></label>
 				<input type="text" name="password" size="32">
 			</p>
 			<p>
-				<input class="btn btn-default" type="submit" name="submit" id="submit" value="Send" <?php if (isset($disable) && $disable === true) echo ' disabled="disabled"'; ?> />
+				<input class="btn btn-default" type="submit" name="submit" id="submit" value="<?php echo $send;?>" <?php if (isset($disable) && $disable === true) echo ' disabled="disabled"'; ?> />
 			</p>
 
 		</form>

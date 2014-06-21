@@ -1,3 +1,10 @@
+<?php
+if(isset($_GET['local']) && $_GET['local']="en") {
+	require('en.php');
+}else{
+	require('fr.php');
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -46,11 +53,11 @@
         <div class="collapse navbar-collapse">
 		
           <ul class="nav navbar-nav navbar-right">
-            <li class="menu"><a href="index.html"  style="color: #59CEE5">Home</a></li>
-            <li class="menu"><a href="about.html">About</a></li>
-            <li class="menu"><a href="contact.php">Contact</a></li>
-			<a href="contact.php"><img src="Images/fr.png"></a> 
-			<a href="contact.php"><img src="Images/en.png"></a>
+            <li class="menu"><a href="index.php<?php echo $local; ?>"  style="color: #59CEE5"><?php echo $home; ?></a></li>
+            <li class="menu"><a href="about.php<?php echo $local; ?>"><?php echo $about; ?></a></li>
+            <li class="menu"><a href="contact.php<?php echo $local; ?>"><?php echo $contact; ?></a></li>
+			<a href="<?php echo basename(__FILE__); ?>"><img src="Images/fr.png"></a> 
+			<a href="<?php echo basename(__FILE__); ?>?local=en"><img src="Images/en.png"></a>
           </ul>
         </div><!--/.nav-collapse -->
 		
@@ -64,7 +71,7 @@
 		<br>
 		<br>
         <!--<h1>Welcome!!</h1> -->
-        <span class="homeText">We Test Your<br />Website's Security<br />For Free</span>
+        <span class="homeText"><?php echo $homeTxt; ?></span>
       </div>
 	
 
@@ -86,9 +93,9 @@
 		</div>
 			
 			<!-- new row -->
-			<div class="imageText"><a href="contact.php">Ask</a></div>
-			<div class="imageText"><a href="about.html">Get Tested</a></div>
-			<div class="imageText"><a href="about.html">Free Report</a></div>
+			<div class="imageText"><a href="contact.php"><?php echo $ask; ?></a></div>
+			<div class="imageText"><a href="about.html"><?php echo $getTested; ?></a></div>
+			<div class="imageText"><a href="about.html"><?php echo $report; ?></a></div>
 			
 		
 

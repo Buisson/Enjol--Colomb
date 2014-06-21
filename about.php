@@ -1,3 +1,10 @@
+<?php
+if(isset($_GET['local']) && $_GET['local']="en") {
+	require('en.php');
+}else{
+	require('fr.php');
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -45,11 +52,11 @@
         <div class="collapse navbar-collapse">
 		
           <ul class="nav navbar-nav navbar-right">
-            <li class="menu"><a href="index.html">Home</a></li>
-            <li class="menu"><a href="about.html" style="color: #59CEE5">About</a></li>
-            <li class="menu"><a href="contact.php">Contact</a></li>
-			<a href="contact.php"><img src="Images/fr.png"></a> 
-			<a href="contact.php"><img src="Images/en.png"></a>
+            <li class="menu"><a href="index.php<?php echo $local; ?>"><?php echo $home; ?></a></li>
+            <li class="menu"><a href="about.php<?php echo $local; ?>"  style="color: #59CEE5"><?php echo $about; ?></a></li>
+            <li class="menu"><a href="contact.php<?php echo $local; ?>"><?php echo $contact; ?></a></li>
+			<a href="<?php echo basename(__FILE__); ?>"><img src="Images/fr.png"></a> 
+			<a href="<?php echo basename(__FILE__); ?>?local=en"><img src="Images/en.png"></a>
           </ul>
         </div><!--/.nav-collapse -->
 		
@@ -61,21 +68,7 @@
       <div class="starter-template">
 		<br>
 		<br>
-        <!--<h1>About</h1>
-        <p class="lead">This is our project you can BLABLABLA<br>Enjoy !</p>-->
-		
-
-		<h1>How it works ?</h1>
-		<p class="paragraphe">You <a href="contact.php">contact us</a> for a free security audit of your website. We will test it in the next few days and try to break into your application. After that we send you a report containing all security breach we found (if we found any!) and advices on how to fix it.</p>
-		<h1>Who is it for ?</h1>
-		<p class="paragraphe">Everyone ! From personal simple portfolio to complexe profesionnal webstores. </p>
-		<h1>Is it risky ?</h1>
-		<p class="paragraphe">Not at all ! Because we are not real attackers we will not exploit breach we found on your website. However we are using some automated scripts that may add strange entry into your databse, we recommand that you make a backup of your database. You can also
-	    send us a copy of you website and databse and we will host it on our computers for the test, making sure your online website stay untouched.</p>
-		<h1>Why free ?</h1>
-		<p class="paragraphe">We are doing this mostly for fun and learning purpose. As we are still learning, the service we provide is nowhere close to profesionnal security audits. We are helping you securing your website and you are helping us learning and practicing. </p>
-		<h1>About Us</h1>	
-		<p class="paragraphe">We are two students in computer science of 20 and 21 years olds. We are starting that little project in order to improve our knowledge in web security and helping people.</p>
+		<?php echo $aboutTxt; ?>
 		
       </div>
 	  
