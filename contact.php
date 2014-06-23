@@ -286,7 +286,7 @@ function get_data($var) {
 			<p>
 			 <p><?= $captchas->image () ?> <a href="javascript:captchas_image_reload('captchas.net')">Reload Image</a> </p>
 				<label for="password"><?php echo $captchaPwd;?></label>
-				<input type="text" name="password" size="32">
+				<input class="form-control" type="text" name="password" size="32">
 			</p>
 			<p>
 				<input class="btn btn-default" type="submit" name="submit" id="submit" value="<?php echo $send;?>" <?php if (isset($disable) && $disable === true) echo ' disabled="disabled"'; ?> />
