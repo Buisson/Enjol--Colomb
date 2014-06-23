@@ -55,8 +55,8 @@ $captchas = new CaptchasDotNet ('demo', 'secret',
 								
 // OPTIONS - PLEASE CONFIGURE THESE BEFORE USE!
 
-$yourEmail = "random@randum.dur"; // the email address you wish to receive these mails through
-$yourWebsite = "WEBSITE NAME"; // the name of your website
+$yourEmail = "contact@friendlysec.org"; // the email address you wish to receive these mails through
+$yourWebsite = "friendlysec"; // the name of your website
 $thanksPage = ''; // URL to 'thanks for sending mail' page; leave empty to keep message on the same page 
 $maxPoints = 4; // max points a person can hit before it refuses to submit - recommend 4
 $requiredFields = "name,email,url,password"; // names of the fields you'd like to be required as a minimum, separate each field with a comma
@@ -196,7 +196,7 @@ function get_data($var) {
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
-    <title>Starter Template for Bootstrap</title>
+    <title>friendlysec:contact</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
