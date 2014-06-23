@@ -103,8 +103,8 @@ if(isset($_GET['local']) && $_GET['local']="en") {
 		
 	</div>
 	
-	<footer>
-	
+	<footer>	
+		<?php echo $footer; ?>
 	</footer>
 
     <!-- Bootstrap core JavaScript

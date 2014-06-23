@@ -5,6 +5,8 @@
 	$contact = "Contact";
 	$local = "";
 	
+	//footer
+	$footer = "&copy; Copyright Example.com ".date('Y');
 	
 	//Home
 	$homeTxt = "Nous Testons La Securit&eacute;<br /> De Votre Site Internet<br />Gratuitement";

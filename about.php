@@ -66,6 +66,7 @@ if(isset($_GET['local']) && $_GET['local']="en") {
     <div class="container">
 
       <div class="starter-template">
+		<div class="spacer1"></div>
 		<br>
 		<br>
 		<?php echo $aboutTxt; ?>
@@ -75,10 +76,11 @@ if(isset($_GET['local']) && $_GET['local']="en") {
 
     </div><!-- /.container -->
 	
-	
-	<footer>
-	
+	<div class="spacer2"></div>
+	<footer>	
+		<?php echo $footer; ?>
 	</footer>
+
 
 
     <!-- Bootstrap core JavaScript

@@ -245,10 +245,8 @@ function get_data($var) {
     </div>
 
     <div class="container">
-
+	  <div class="spacer1">&nbsp;</div>
       <div class="starter-template">
-		<br>
-		<br>
         <h1><?php echo $contactTitle;?></h1>
         <p class="lead"><?php echo $byMail;?></p>
 			<p class="paragraphe"><a href="mailto:random@mail.com"><img src="Images/mail.png"></a></p>
@@ -300,10 +298,17 @@ function get_data($var) {
 		
 		
       </div>
-
+	
     </div><!-- /.container -->
+	<footer>	
+		<?php echo $footer; ?>
+	</footer>
+
+	
+</div>
 
 
+	
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

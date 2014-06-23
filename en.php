@@ -5,6 +5,9 @@
 	$contact = "Contact";
 	$local = "?local=en";
 	
+	//footer
+	$footer = "&copy; Copyright Example.com ".date('Y');
+	
 	//Home
 	$homeTxt = "We Test Your<br />Website's Security<br />For Free";
 	$ask = "Ask Us";
@@ -44,5 +47,7 @@
 	$error8 = 'Your mail could not be sent this time.\r\n';
 	$error9 = 'Your mail looks too much like spam, and could not be sent this time.\r\n';
 	$success = "Your mail was successfully sent.\r\n";
+	
+
 
 ?>
