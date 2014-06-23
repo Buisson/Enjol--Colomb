@@ -85,10 +85,10 @@ if(isset($_GET['local']) && $_GET['local']="en") {
 					<a href="contact.php"><img src="Images/ask.png"></a>
 			</div>
 			<div class="imageBanner">
-				<a href="about.html"><img src="Images/tested.png"></a>
+				<a href="about.php"><img src="Images/tested.png"></a>
 			</div>
 			<div class="imageBanner">
-				<a href="about.html"><img src="Images/report.png"></a>
+				<a href="about.php"><img src="Images/report.png"></a>
 			</div>
 		</div>
 			
