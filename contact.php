@@ -249,7 +249,7 @@ function get_data($var) {
       <div class="starter-template">
         <h1><?php echo $contactTitle;?></h1>
         <p class="lead"><?php echo $byMail;?></p>
-			<p class="paragraphe"><a href="mailto:random@mail.com"><img src="Images/mail.png"></a></p>
+			<p class="paragraphe"><a href="mailto:contact@friendlysec.org"><img src="Images/mail.png"></a></p>
 		<div class="spacer1">&nbsp;</div>
 		<p class="lead"><?php echo $bySite;?></p>
 		<?php
