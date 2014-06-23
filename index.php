@@ -82,20 +82,20 @@ if(isset($_GET['local']) && $_GET['local']="en") {
 	<div class="bottom-banner">
 		<div class="imageBanner-Wrapper">
 			<div class="imageBanner">
-					<a href="contact.php"><img src="Images/ask.png"></a>
+					<a href="contact.php<?php echo $local;?>"><img src="Images/ask.png"></a>
 			</div>
 			<div class="imageBanner">
-				<a href="about.php"><img src="Images/tested.png"></a>
+				<a href="about.php<?php echo $local; ?>"><img src="Images/tested.png"></a>
 			</div>
 			<div class="imageBanner">
-				<a href="about.php"><img src="Images/report.png"></a>
+				<a href="about.php<?php echo $local; ?>"><img src="Images/report.png"></a>
 			</div>
 		</div>
 			
 			<!-- new row -->
-			<div class="imageText"><a href="contact.php"><?php echo $ask; ?></a></div>
-			<div class="imageText"><a href="about.html"><?php echo $getTested; ?></a></div>
-			<div class="imageText"><a href="about.html"><?php echo $report; ?></a></div>
+			<div class="imageText"><a href="contact.php<?php echo $local; ?>"><?php echo $ask ?></a></div>
+			<div class="imageText"><a href="about.php<?php echo $local; ?>"><?php echo $getTested; ?></a></div>
+			<div class="imageText"><a href="about.php<?php echo $local; ?>"><?php echo $report; ?></a></div>
 			
 		
 
