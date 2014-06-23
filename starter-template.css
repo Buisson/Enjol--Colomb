@@ -12,9 +12,14 @@ p.success {
 	color: #4fa000;
 }
 
+.homeTxt {
+	padding-left: 100px;
+}
+
 .homeText {
 
-	font : normal normal normal 90px/1.4em Arial, Helvetica, sans-serif;/*Verdana, Geneva, sans-serif;;*/
+	font-family: verdana,arial,helvetica,sans-serif;
+	font-size: 65px;
 	color : rgb(156,156,156);
 
 }
@@ -87,7 +92,8 @@ h1 {
 	width:340px;
 	text-align:center;
 
-    font: 28px/1.4em enriqueta,serif;
+    font: verdana,arial,helvetica,sans-serif;
+	font-size: 15px;
     color: #DFDFDF;
 
 }

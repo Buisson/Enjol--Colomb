@@ -9,7 +9,7 @@
 	$footer = "&copy; Copyright FriendlySec.org ".date('Y');
 	
 	//Home
-	$homeTxt = "Nous Testons La Securit&eacute;<br /> De Votre Site Internet<br />Gratuitement";
+	$homeTxt = "Nous Testons La Securit&eacute;<br /> De Votre Site Web<br />Gratuitement";
 	$ask = "Demandez Nous";
 	$getTested = "Faites Vous Tester";
 	$report = "Compte Rendu Gratuit";

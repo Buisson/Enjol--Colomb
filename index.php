@@ -67,7 +67,7 @@ if(isset($_GET['local']) && $_GET['local']="en") {
 
     <div class="container">
 
-      <div class="starter-template">
+      <div class="homeTxt">
 		<br>
 		<br>
         <!--<h1>Welcome!!</h1> -->
