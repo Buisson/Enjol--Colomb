@@ -170,7 +170,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 				header("Location: $thanksPage");
 				exit;
 			} else {
-				$result = 'Your mail was successfully sent.';
+				$result = '$success';
 				$disable = true;
 			}
 		} else {
@@ -262,7 +262,7 @@ function get_data($var) {
 				echo '<p class="success">'. $result . "</p>";
 			}
 		?>
-		<form action="<?php echo basename(__FILE__); ?>" method="post">
+		<form action="<?php echo basename(__FILE__).$local; ?>" method="post">
 			<noscript>
 				<p><input type="hidden" name="nojs" id="nojs" /></p>
 			</noscript>

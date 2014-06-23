@@ -35,13 +35,15 @@
 	$captchaPwd = "Mot de passe CAPTCHA: *";
 	$send = "envoyer";
 	
-	$error = "Pas de bots SVP ! UA reported as: ".$_SERVER['HTTP_USER_AGENT'];
-	$error2 = "Veuillez remplir tout les champs qui sont demandés et envoyez de nouveau.";
-	$error3 = "The name field must not contain special characters.\r\n";
+	$error = "Pas de bots SVP ! (".$_SERVER['HTTP_USER_AGENT'].")";
+	$error2 = "Veuillez remplir tout les champs qui sont demand&eacute;s et envoyez de nouveau.\r\n";
+	$error3 = "Charact&egrave;res sp&ecute;ciaux interdit pour \"Nom\".\r\n";
 	$error4 = "E-mail invalide.\r\n";
 	$error5 = "URL invalid.\r\n";
-	$error6 = "The session key (random) does not exist, please go back and reload form.\r\n";
-	$error7 = "You entered the wrong password. Aren't you human? Please use back button and reload.\r\n";
-	$error8 = 'Your mail could not be sent this time. ';//['.$points.']';
-	$error9 = 'Your mail looks too much like spam, and could not be sent this time.';// ['.$points.']';
+	$error6 = "Erreur d'initialisation du CAPTCHA.\r\n";
+	$error7 = "Mauvais CAPTCHA.\r\n";
+	$error8 = 'Nous ne pouvons recevoir votre requete (erreur)';
+	$error9 = 'Votre message ressemble trop a du spam.';
+	
+	$success = "Nous avons bien re&ccedil;u votre demande.\r\n";
 ?>

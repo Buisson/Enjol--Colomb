@@ -41,7 +41,8 @@
 	$error5 = "Invalid website url.\r\n";
 	$error6 = "The session key (random) does not exist, please go back and reload form.\r\n";
 	$error7 = "You entered the wrong password. Aren't you human? Please use back button and reload.\r\n";
-	$error8 = 'Your mail could not be sent this time. ';//TODO ajouter : ['.$points.']';
-	$error9 = 'Your mail looks too much like spam, and could not be sent this time.';//TODO ajouter : ['.$points.']';
+	$error8 = 'Your mail could not be sent this time.\r\n';
+	$error9 = 'Your mail looks too much like spam, and could not be sent this time.\r\n';
+	$success = "Your mail was successfully sent.\r\n";
 
 ?>
