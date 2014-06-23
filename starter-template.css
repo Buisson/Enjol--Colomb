@@ -14,13 +14,14 @@ p.success {
 
 .homeText {
 
-	font : normal normal normal 90px/1.4em enriqueta, serif;
+	font : normal normal normal 90px/1.4em Impact;/*Verdana, Geneva, sans-serif;;*/
 	color : rgb(156,156,156);
 
 }
 
 h1 {
 	text-align:left;
+	font:normal normal normal 23px/1.4em enriqueta, serif;
 }
 
 .paragraphe {
