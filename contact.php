@@ -87,7 +87,7 @@ function isBot() {
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
 	if (isBot() !== false)
-		$error_msg[] = "No bots please! UA reported as: ".$_SERVER['HTTP_USER_AGENT'];
+		$error_msg[] = $error;//"No bots please! UA reported as: ".$_SERVER['HTTP_USER_AGENT'];
 		
 	$password = $_REQUEST['password'];	
 	$random_string = $_REQUEST['random'];
@@ -96,7 +96,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 	// score quickly adds up therefore allowing genuine users with 'accidental' score through but cutting out real spam :)
 	$points = (int)0;
 	
-	$badwords = array("adult", "beastial", "bestial", "blowjob", "clit", "cum", "cunilingus", "cunillingus", "cunnilingus", "cunt", "ejaculate", "fag", "felatio", "fellatio", "fuck", "fuk", "fuks", "gangbang", "gangbanged", "gangbangs", "hotsex", "hardcode", "jism", "jiz", "orgasim", "orgasims", "orgasm", "orgasms", "phonesex", "phuk", "phuq", "pussies", "pussy", "spunk", "xxx", "viagra", "phentermine", "tramadol", "adipex", "advai", "alprazolam", "ambien", "ambian", "amoxicillin", "antivert", "blackjack", "backgammon", "texas", "holdem", "poker", "carisoprodol", "ciara", "ciprofloxacin", "debt", "dating", "porn", "link=", "voyeur", "content-type", "bcc:", "cc:", "document.cookie", "onclick", "onload", "javascript");
+	$badwords = array("adult", "beastial", "bestial", "blowjob", "clit", "cum", "cunilingus", "cunillingus", "cunnilingus", "cunt", "ejaculate", "fag", "felatio", "fellatio", "fuck", "fuk", "fuks", "gangbang", "gangbanged", "gangbangs", "hotsex", "hardcode", "jism", "jiz", "orgasim", "orgasims", "orgasm", "orgasms", "phonesex", "phuk", "phuq", "pussies", "pussy", "spunk", "xxx", "viagra", "phentermine", "tramadol", "adipex", "advai", "alprazolam", "ambien", "ambian", "amoxicillin", "antivert", "blackjack", "backgammon", "texas", "holdem", "poker", "carisoprodol", "ciara", "ciprofloxacin", "debt", "dating", "porn", "link=", "voyeur", "content-type", "bcc:", "cc:", "document.cookie", "onclick", "onload", "javascript", "bite", "cul", "enculé", "fistiniere", "sperme", "sperm");
 
 	foreach ($badwords as $word)
 		if (
@@ -123,21 +123,21 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 		trim($_POST[$field]);
 		
 		if (!isset($_POST[$field]) || empty($_POST[$field]) && array_pop($error_msg) != "Please fill in all the required fields and submit again.\r\n")
-			$error_msg[] = "Please fill in all the required fields and submit again.";
+			$error_msg[] = $error2;//"Please fill in all the required fields and submit again.";
 	}
 
 	if (!empty($_POST['name']) && !preg_match("/^[a-zA-Z-'\s]*$/", stripslashes($_POST['name'])))
-		$error_msg[] = "The name field must not contain special characters.\r\n";
+		$error_msg[] = $error3;//"The name field must not contain special characters.\r\n";
 	if (!empty($_POST['email']) && !preg_match('/^([a-z0-9])(([-a-z0-9._])*([a-z0-9]))*\@([a-z0-9])(([a-z0-9-])*([a-z0-9]))+' . '(\.([a-z0-9])([-a-z0-9_-])?([a-z0-9])+)+$/i', strtolower($_POST['email'])))
-		$error_msg[] = "That is not a valid e-mail address.\r\n";
+		$error_msg[] = $error4;//"That is not a valid e-mail address.\r\n";
 	if (!empty($_POST['url']) && !preg_match('/^(http|https):\/\/(([A-Z0-9][A-Z0-9_-]*)(\.[A-Z0-9][A-Z0-9_-]*)+)(:(\d+))?\/?/i', $_POST['url']))
-		$error_msg[] = "Invalid website url.\r\n";
+		$error_msg[] = $error5;//"Invalid website url.\r\n";
 		
 	//CAPTCHA
 	if (!empty($_POST['password']) && !$captchas->validate ($random_string))
-		$error_msg[] = "The session key (random) does not exist, please go back and reload form.\r\n";
+		$error_msg[] = $error6;//"The session key (random) does not exist, please go back and reload form.\r\n";
 	elseif (!empty($_POST['password']) && !$captchas->verify ($password))
-		$error_msg[] = "You entered the wrong password. Aren't you human? Please use back button and reload.\r\n";
+		$error_msg[] = $error7;//"You entered the wrong password. Aren't you human? Please use back button and reload.\r\n";
 		
 	
 	if ($error_msg == NULL && $points <= $maxPoints) {
@@ -174,11 +174,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 				$disable = true;
 			}
 		} else {
-			$error_msg[] = 'Your mail could not be sent this time. ['.$points.']';
+			$error_msg[] = $error8;//'Your mail could not be sent this time. ['.$points.']';
 		}
 	} else {
 		if (empty($error_msg))
-			$error_msg[] = 'Your mail looks too much like spam, and could not be sent this time. ['.$points.']';
+			$error_msg[] = $error9;//'Your mail looks too much like spam, and could not be sent this time. ['.$points.']';
 	}
 }
 function get_data($var) {

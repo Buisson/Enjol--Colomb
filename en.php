@@ -33,5 +33,15 @@
 	$comment = "Comment: ";
 	$captchaPwd = "CAPTCHA password: *";
 	$send = "send";
+	
+	$error = "No bots please! UA reported as: ".$_SERVER['HTTP_USER_AGENT'];
+	$error2 = "Please fill in all the required fields and submit again.";
+	$error3 = "The name field must not contain special characters.\r\n";
+	$error4 = "That is not a valid e-mail address.\r\n";
+	$error5 = "Invalid website url.\r\n";
+	$error6 = "The session key (random) does not exist, please go back and reload form.\r\n";
+	$error7 = "You entered the wrong password. Aren't you human? Please use back button and reload.\r\n";
+	$error8 = 'Your mail could not be sent this time. ';//TODO ajouter : ['.$points.']';
+	$error9 = 'Your mail looks too much like spam, and could not be sent this time.';//TODO ajouter : ['.$points.']';
 
 ?>
