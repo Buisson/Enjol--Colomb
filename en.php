@@ -6,7 +6,7 @@
 	$local = "?local=en";
 	
 	//footer
-	$footer = "&copy; Copyright Example.com ".date('Y');
+	$footer = "&copy; Copyright FriendlySec.org ".date('Y');
 	
 	//Home
 	$homeTxt = "We Test Your<br />Website's Security<br />For Free";
