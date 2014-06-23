@@ -23,7 +23,7 @@
 		<p class="paragraphe">Pas du tout ! Nous ne somme pas de r&eacute;el hackers nous n\'exploitons pas les failles que nous d&eacute;couvrons. Cependant nous utilisons divers outils qui peuvent cr&eacute;er des entr&eacute;es &eacute;trange dans votre base de donn&eacute;e, nous vous recommandons de cr&eacute;er un backup de cette derni&egrave;re avant de nous soumettre votre site. 
 		Vous pouvez aussi nous envoyer une copie de votre site ainsi que de sa base de donn&eacute;e pour que nous effectuions les tests en local sans toucher a votre site en ligne.</p>
 		<h1>Pourquoi gratuit ?</h1>
-		<p class="paragraphe">Nous faisons cela principalement pour le fun et pour apprendre. Nous sommes loin d\'&ecirc; tre des professionnel et nous n\'estimons pas fournir un service sans failles. Nous vous aidons a s&eacute;curiser votre site, en contre partie vous nous aidez a nous am&eacute;liorer. </p>
+		<p class="paragraphe">Nous faisons cela principalement pour le fun et pour apprendre. Nous sommes loin d\'&ecirc;tre des professionnel et nous n\'estimons pas fournir un service sans failles. Nous vous aidons a s&eacute;curiser votre site, en contre partie vous nous aidez &agrave; nous am&eacute;liorer. </p>
 		<h1>A propos de nous</h1>	
 		<p class="paragraphe">Nous sommes deux &eacute;tudiant en informatique de 21 et 22 ans. Nous participons a ce projet afin d\'am&eacute;liorer nos connaissances en s&eacute;curit&eacute; informatique.</p>';
 	
