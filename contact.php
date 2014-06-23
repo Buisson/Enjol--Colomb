@@ -130,7 +130,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 		$error_msg[] = $error3;//"The name field must not contain special characters.\r\n";
 	if (!empty($_POST['email']) && !preg_match('/^([a-z0-9])(([-a-z0-9._])*([a-z0-9]))*\@([a-z0-9])(([a-z0-9-])*([a-z0-9]))+' . '(\.([a-z0-9])([-a-z0-9_-])?([a-z0-9])+)+$/i', strtolower($_POST['email'])))
 		$error_msg[] = $error4;//"That is not a valid e-mail address.\r\n";
-	if (!empty($_POST['url']) && !preg_match('/^(http|https):\/\/(([A-Z0-9][A-Z0-9_-]*)(\.[A-Z0-9][A-Z0-9_-]*)+)(:(\d+))?\/?/i', $_POST['url']))
+	if (!empty($_POST['url']) && !preg_match('/^((http|https):\/\/)*(([A-Z0-9][A-Z0-9_-]*)(\.[A-Z0-9][A-Z0-9_-]*)+)(:(\d+))?\/?/i', $_POST['url']))
 		$error_msg[] = $error5;//"Invalid website url.\r\n";
 		
 	//CAPTCHA
@@ -170,7 +170,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 				header("Location: $thanksPage");
 				exit;
 			} else {
-				$result = '$success';
+				$result = $success;
 				$disable = true;
 			}
 		} else {
