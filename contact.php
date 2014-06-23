@@ -196,7 +196,7 @@ function get_data($var) {
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
-    <title>friendlysec:contact</title>
+    <title>FriendlySec:contact</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
